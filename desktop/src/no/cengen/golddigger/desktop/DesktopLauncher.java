@@ -6,7 +6,13 @@ import no.cengen.golddigger.GoldDigger;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
-		LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-		new LwjglApplication(new GoldDigger(), config);
+		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
+
+		cfg.title = "gold-digger";
+		cfg.useGL30 = false;
+		cfg.width = 480;
+		cfg.height = 320;
+
+		new LwjglApplication(new GoldDigger(), cfg);
 	}
 }
